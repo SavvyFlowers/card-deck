@@ -1,10 +1,10 @@
 //This should create the Card class
 //Black is 0, and Red is 1
 //Joker is -1 for suite and number
-// Spades is 1, with numbers 0-13, and color as 0
-//Hearts is 2, with 0-13, and color is 1
-//Clubs is 3, with 0-13, and color is 0
-//Diamonds is 4, with 0-13 and color is 1
+// Spades is 0, with numbers 0-13, and color as 0
+//Hearts is 1, with 0-13, and color is 1
+//Clubs is 2, with 0-13, and color is 0
+//Diamonds is 3, with 0-13 and color is 1
 
 class Card
 {
@@ -37,5 +37,14 @@ class Card
   public String getSuite()
   {
     if (CardSuite == -1)
+      return "Your card is a Joker.";
+    else if (CardSuite == 0)
+      return "Your card is a Spade.";
+    else if (CardSuite == 1)
+      return "Your card is a Heart.";
+    else if (CardSuite == 2)
+      return "Your card is a Club.";
+    else 
+      return "Your card is a Diamond.";
   }
 }
