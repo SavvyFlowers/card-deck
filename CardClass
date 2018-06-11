@@ -23,4 +23,19 @@ class Card
     newSuite = CardSuite;
     newColor = CardColor;
   }
+  
+  //get color
+  public String getColor()
+  {
+    if (CardColor == 0)
+      return "This Card is a black card.";
+    else
+      return "This Card is a red card.";
+  }
+  
+  //get suite
+  public String getSuite()
+  {
+    if (CardSuite == -1)
+  }
 }
