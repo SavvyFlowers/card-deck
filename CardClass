@@ -1,0 +1,18 @@
+//This should create the Card class
+//Black is 0, and Red is 1
+//Joker is -1 for suite and number
+// Spades is 1, with numbers 0-13, and color as 0
+//Hearts is 2, with 0-13, and color is 1
+//Clubs is 3, with 0-13, and color is 0
+//Diamonds is 4, with 0-13 and color is 1
+
+class Card
+{
+  //card default is black joker
+  public Card()
+  {
+    int CardNumber = -1;
+    int CardSuite = -1;
+    int CardColor = 
+  }
+}
