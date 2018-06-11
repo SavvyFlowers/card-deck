@@ -13,6 +13,14 @@ class Card
   {
     int CardNumber = -1;
     int CardSuite = -1;
-    int CardColor = 
+    int CardColor = 0;
+  }
+  
+  //custom card
+  public Card(int newNumber, int newSuite, int newColor)
+  {
+    newNumber = CardNumber;
+    newSuite = CardSuite;
+    newColor = CardColor;
   }
 }
