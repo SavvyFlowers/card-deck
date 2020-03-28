@@ -8,83 +8,75 @@
 
 class Card
 {
+
+  //private class variables
+  private int CardNumber;
+  private int CardSuite;
+  private int CardColor;
+
   //card default is black joker
   public Card()
   {
-    int CardNumber = -1;
-    int CardSuite = -1;
-    int CardColor = 0;
+    this.CardNumber = -1;
+    this.CardSuite = -1;
+    this.CardColor = 0;
   }
   
   //custom card
   public Card(int newNumber, int newSuite, int newColor)
   {
-    newNumber = CardNumber;
-    newSuite = CardSuite;
-    newColor = CardColor;
+    CardNumber = newNumber;
+    CardSuite = newSuite;
+    CardColor = newColor;
   }
   
   //get color
   public String getColor()
   {
     if (CardColor == 0)
-      return "This Card is a black card.";
-    else
-      return "This Card is a red card.";
+      return "black";
+    else if(CardColor == 1)
+      return "red";
   }
   
   //get suite
   public String getSuite()
   {
     if (CardSuite == -1)
-      return "Your card is a Joker.";
+      return "Joker";
     else if (CardSuite == 0)
-      return "Your card is a Spade.";
+      return "Spades";
     else if (CardSuite == 1)
-      return "Your card is a Heart.";
+      return "Hearts";
     else if (CardSuite == 2)
-      return "Your card is a Club.";
+      return "Clubs";
     else 
-      return "Your card is a Diamond.";
+      return "Diamonds";
   }
   
   //get number
   public String getNumber()
   {
     if (CardNumber < 0)
-      return "Your card is a joker.";
+      return "joker";
+    else if(CardNumber == 1)
+      return "Ace";
     else if (CardNumber > 10)
     {
       if (CardNumber == 11)
-        return "Your card is a Jack.";
+        return "Jack";
       else if (CardNumber == 12)
-        return "Your card is a Queen.";
+        return "Queen";
       else if (CardNumber == 13)
-        return "Your card is a King.";
+        return "King";
     }
     else
-      return "Your card is a " + CardNumber;
+      return " " + CardNumber;
   }
   
   //get card
-  public String getCard()
+  public String toString()
   {
-    if (CardSuite < 0)
-    {
-    
-    }
-    else if (CardSuite == 0)
-    {
-    
-    }
-    else if (CardSuite == 1)
-    {
-    
-    }
-    else if (CardSuite == 2)
-    {
-    
-    }
-    
+    return "Your card is a " + this.getColor() + " " + this.getNumber() + " of " + this.getSuite();
   }
 }
